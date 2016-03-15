@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact us</title>
+</head>
+<body>
+    <h1>Настройки</h1>
+    <table border="1">
+        <tr>
+            {% for m in kam %}
+            <td><b>Камера</b></td>
+            <td><a href="/settings/{{ vol }}/{{ m.id }}">{{ m.name }}</a></td>
+            {% endfor %}
+        </tr>
+        <tr>
+            {% for m in kam %}
+            <td><b>Место нахождения</b></td>
+            <td>{{ m.adress }}</td>
+        {% endfor %}
+        </tr>
+    </table>
+</br>
+    <table>
+        <tr>
+            {% for am in mm %}
+            <td><a href = "/settings/0{{ am }}/{{ vrem.id }}">{{ am }}</a></td>
+            {% endfor %}
+        </tr>
+    </table>
+</br>
+<h2><b>{{ nas_kam }}</b></h2>
+{% if k %}
+    {% if form.errors %}
+        <p style="color: red;">
+            Please correct the error{{ form.errors|pluralize }} below.
+        </p>
+    {% endif %}
+
+    <form action="" method="post">{% csrf_token %}
+        <table>
+            {{ form.as_table }}
+        </table>
+        <input type="submit" value="Сохранить">
+    </form>
+{% endif %}
+</br>
+{% if vrem %}
+    <h1>Имещиеся настройки камер</h1>
+    <table border="1">
+        <tr>
+            <td>Имя камеры</td>
+            <td>{{ vrem.name }}</td>
+        </tr>
+        <tr>
+            <td>Адресс нахождения</td>
+            <td>{{ vrem.adress }}</td>
+        </tr>
+        <tr>
+            <td>Имя входа в первую область</td>
+            <td>{{ vrem.detektor1 }}</td>
+        </tr>
+        <tr>
+            <td>Имя выхода из первой области</td>
+            <td>{{ vrem.detektor2 }}</td>
+        </tr>
+        <tr>
+            <td>Имя входа во втрою область</td>
+            <td>{{ vrem.detektor3 }}</td>
+        </tr>
+        <tr>
+            <td>Имя выхода из второй области</td>
+            <td>{{ vrem.detektor4 }}</td>
+        </tr>
+        <tr>
+            <td>Имя файла лога</td>
+            <td>{{ vrem.file_name }}</td>
+        </tr>
+    </table>
+{% endif %}
+</br>
+<h1><a href="/settings/07/0">Создать камеру</a></h1>
+</body>
+</html>

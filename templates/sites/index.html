@@ -1,0 +1,39 @@
+{% extends "sites/shablon.html" %}
+{% load staticfiles %}
+
+{% block login %}
+{% if user.username %}
+{% else %}
+{% if not autuser %}
+<tbody>
+{% if form.errors %}
+    <p class="error">Сожалеем, вы неправильно ввели логин или пароль</p>
+{% endif %}
+<tr>
+<form style="margin: 0;" action='' method='post'> {% csrf_token %}
+<td style="padding-bottom: 5px;">Имя:<br><input type="text" class="textbox" name="username" value="" id="username"></td></tr>
+<tr>
+<td style="padding-bottom: 5px;">Password:<br><input type="password" class="textbox" name="password" value="" id="password"></td></tr>
+<tr>
+<td><input class="submit" value="войти" type="submit">
+    <input type="hidden" name="next" value="{{ next|escape }}" />
+
+    <script type="text/javascript">
+document.getElementById('id_username').focus()
+</script>
+<ul>
+    <li><a href="{% url 'auth_password_reset' %}">Забыли пароль?</a></li>
+    <li><a href="{% url 'registration_register' %}">Регистрация</a></li>
+</ul>
+
+</form></td></tr></tbody></table></td></tr>
+</tbody>
+
+{% endif %}
+{% endif %}
+{% endblock %}
+
+
+
+
+

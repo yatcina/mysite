@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+{% load staticfiles %}
+<table border="1">
+{% for book in books %}
+        <tr><td>   <a href="/static/thanks.html"> {{ book.title }}  </a>     </td>
+            <td>{{ book.publisher }}</td>
+            <td>{{ book.publication_date }}</td>
+        <td>{% for v in book.authors.all %}
+                <li>name={{ v.first_name }} famili={{ v.last_name }} <img src="{{ v.heatshot.url }}" height="50" width="50"></li>
+        {% endfor %}</td>
+        </tr>
+{% endfor %}
+<p> {{  }}
+</body>
+</html>

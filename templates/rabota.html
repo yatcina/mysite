@@ -1,0 +1,184 @@
+{%  extends "sites/shablon.html" %}
+{% block body %}
+<html>
+<head>
+    <title>Contact us</title>
+</head>
+<body>
+
+    {% load poll_extras %}
+
+    {% if result and a and b and not c and not wr %}
+        <form action="" method="post">{% csrf_token %}
+        <input type="submit" value="записать" name="button">
+    </form>
+        <table border="1">
+        <tr>
+            <td><PRE>{%for n in result|color_text %}{{ n|safe }}{% endfor %}</PRE></td>
+        </tr>
+        <tr>
+            <td><div>{{ a }}</div></td>
+        </tr>
+        <tr>
+            <td>{{ b }}</td>
+        </tr>
+        </table>
+    {% endif %}
+
+    {% if result and not a and not b and c and wr %}
+        <form action="" method="post">{% csrf_token %}
+        <input type="submit" value="записать" name="button">
+    </form>
+        <table border="1">
+        <tr>
+            <td><PRE>{%for n in result|color_text %}{{ n|safe }}{% endfor %}</PRE></td>
+        </tr>
+        <tr>
+            <td><div>{{ c }}</div></td>
+        </tr>
+        <tr>
+            <td>{{ wr }}</td>
+        </tr>
+        </table>
+    {% endif %}
+
+    {% if result and not a and b and not c and wr and wb %}
+        <form action="" method="post">{% csrf_token %}
+        <input type="submit" value="записать" name="button">
+    </form>
+        <table border="1">
+        <tr>
+            <td width = 100%><PRE>{%for n in result|color_text %}{{ n|safe }}{% endfor %}</PRE></td>
+        </tr>
+        <tr>
+            <td width = 100%><div>{{ wb }}</div></td>
+        </tr>
+        <tr>
+            <td width = 100%>{{ wr }}</td>
+        </tr>
+        </table>
+    {% endif %}
+
+    {% if result and not a and b and c and d and wr and wb %}
+        <form action="" method="post">{% csrf_token %}
+        <input type="submit" value="записать" name="button">
+    </form>
+        <table border="1">
+        <tr>
+            <td width = 100%><PRE>{%for n in result|color_text %}{{ n|safe }}{% endfor %}</PRE></td>
+        </tr>
+        </table>
+        <table border="1">
+        <tr>
+            <td width = 50%>{{ wr }}</td>
+            <td width = 50%>{{ wb }}</td>
+        </tr>
+        </table>
+    {% endif %}
+
+    {% if result and not a and b and not c and not wr%}
+        <form action="" method="post">{% csrf_token %}
+        <input type="submit" value="записать" name="button">
+    </form>
+        <table border="1">
+        <tr>
+            <td width = 100%><PRE>{%for n in result|color_text %}{{ n|safe }}{% endfor %}</PRE></td>
+        </tr>
+        </table>
+    {% endif %}
+
+    {% if result and a and b and c and not wr and not rr %}
+        <form action="" method="post">{% csrf_token %}
+        <input type="submit" value="записать" name="button">
+    </form>
+        <table border="1">
+        <tr>
+            <td width = 100%><PRE>{%for n in result|color_text %}{{ n|safe }}{% endfor %}</PRE></td>
+        </tr>
+        <tr>
+            <td>Количество букв</td>
+            <td>{{ c }}</td>
+        </tr>
+        <tr>
+            <td>По пифагору</td>
+            <td>{{ a }}</td>
+        </tr>
+        <tr>
+            <td> По реалу</td>
+            <td>{{ b }}</td>
+        </tr>
+        </table>
+    {% endif %}
+
+    {% if result and a and b and c and not wr and rr %}
+        <form action="" method="post">{% csrf_token %}
+        <input type="submit" value="записать" name="button">
+    </form>
+        <table border="1">
+        <tr>
+            <td width = 100%><PRE>{%for n in result|color_text %}{{ n|safe }}{% endfor %}</PRE></td>
+        </tr>
+        <tr>
+            <td>Количество букв</td>
+            <td>{{ c }}</td>
+        </tr>
+        <tr>
+            <td>По пифагору</td>
+            <td>{{ a }}</td>
+        </tr>
+        <tr>
+            <td> По реалу</td>
+            <td>{{ b }}</td>
+        </tr>
+        <tr>
+            <td>{{ rr }}</td>
+        </tr>
+        </table>
+    {% endif %}
+
+    {% if form.errors %}
+       <p style="color: red;">
+       Please correct the error{{ form.errors|pluralize }} below.
+            </p>
+    {% endif %}
+    {% if not result %}
+    <form action="" method="post" enctype="multipart/form-data">{% csrf_token %}
+           {{ form.as_p }}
+
+        <input type="submit" value="Погладеть" name = "submit">
+        <input type="submit" value="покинуть сайт" name = "logout">
+    </form>
+    {% endif %}
+
+</body>
+</html>
+{% endblock %}
+
+{% block login %}
+{% if not autuser %}
+<tbody>
+{% if form.errors %}
+    <p class="error">Сожалеем, вы неправильно ввели логин или пароль</p>
+{% endif %}
+<tr>
+<form style="margin: 0;" action='' method='post'> {% csrf_token %}
+<td style="padding-bottom: 5px;">Имя:<br><input type="text" class="textbox" name="username" value="" id="username"></td></tr>
+<tr>
+<td style="padding-bottom: 5px;">Password:<br><input type="password" class="textbox" name="password" value="" id="password"></td></tr>
+<tr>
+<td><input class="submit" value="войти" type="submit">Регистрация
+    <input type="hidden" name="next" value="{{ next|escape }}" />
+
+    <script type="text/javascript">
+document.getElementById('id_username').focus()
+</script>
+
+ <br><br>
+<ul>
+    <li><a href="{% url 'auth_password_reset' %}">Забыли пароль?</a></li>
+    <li><a href="{% url 'registration_register' %}">Регистрация</a></li>
+</ul>
+</form></td></tr></tbody></table></td></tr>
+</tbody>
+ {% endif %}
+ {% endblock %}

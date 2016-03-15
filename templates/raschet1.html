@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8" />
+        <title>Расчёт для сереги</title>
+        <link rel="stylesheet" href="/statics/serega.css" />
+    </head>
+    <body>
+    {% if form2.errors %}
+            <p style="color: red;">
+                Please correct the error{{ form2.errors|pluralize }} below.
+            </p>
+        {% endif %}
+
+     <form action="" method="post">{% csrf_token %}
+            <table>
+                {{ form2.as_table }}
+            </table>
+            <input type="submit" value="Расчитать">
+     </form>
+    <header class="textfont">
+    {% if a %}
+    {% load poll_extras %}
+    <table border="1">
+        <tr><td>Число</td>
+            <td>Обратное число</td>
+        </tr>
+        <tr>
+            <td>{% for n in mas_ch %}
+            <a href ="/raschet/{{ n }}/">{{ n }}</a></br>
+            {% endfor %}
+            </td>
+           <td>
+               {% for n in mas_ch_obr %}
+               <a href ="/raschet/{{ n }}/">{{ n }}</a></br>
+               {% endfor %}
+           </td>
+        </tr>
+        <tr>
+            <td>Пиздецы</br>
+              {% for m in a5 %}
+              <b>{{ m }}</b><br>
+              {% endfor %}
+          </td>
+            <td>Числа</br>
+             {% for m in a|color_text_a %}
+             <b>{{ m|safe }}</b><br>
+             {% endfor %}
+          </td>
+          <td>Умножен</br>
+              {% for m in a1|color_text_a %}
+              <a href ="/raschet/{{ m|striptags }}">{{ m|safe }}</a><br>
+              {% endfor %}
+          </td>
+           <td>Деление</br>
+              {% for m in a2|color_text_a %}
+              <a href ="/raschet/{{ m|striptags }}">{{ m|safe }}<br>
+              {% endfor %}
+          </td>
+          <td>Умножен_обратно</br>
+              {% for m in a3|color_text_a %}
+              <a href ="/raschet/{{ m|striptags }}">{{ m|safe }}<br>
+              {% endfor %}
+          </td>
+           <td>Делен_обрат</br>
+              {% for m in a4|color_text_a %}
+              <a href ="/raschet/{{ m|striptags }}">{{ m|safe }}<br>
+              {% endfor %}
+          </td>
+          </td>
+     </tr>
+     <tr>
+         <td>Степени</br>
+              {% for m in a6|color_text_a %}
+              <b>{{ m|safe }}</b><br>
+              {% endfor %}
+         </td>
+          <td>степень числа пиз</br>
+              {% for m in a7|color_text_a %}
+              <a href ="/raschet/{{ m|striptags }}">{{ m|safe }}<br>
+              {% endfor %}
+          </td>
+          <td>Обратная степень</br>
+              {% for m in a8|color_text_a %}
+              <a href ="/raschet/{{ m|striptags }}">{{ m|safe }}<br>
+              {% endfor %}
+          </td>
+         <td>Планеты</br>
+              {% for m in a9 %}
+              <b>{{ m }}</b><br>
+              {% endfor %}
+          </td>
+          <td>Количество оборотов вокруг солнца</br>
+              {% for m in a10|color_text_a %}
+              <a href ="/raschet/{{ m|striptags }}">{{ m|safe }}<br>
+              {% endfor %}
+          </td>
+          <td>Количество градусов вокруг солнца на оборот</br>
+              {% for m in obrat_360|color_text_a %}
+              <a href ="/raschet/{{ m|striptags }}">{{ m|safe }}<br>
+              {% endfor %}
+          </td>
+     </tr>
+ <tr><td><b>--------------------</b></td></tr>
+ <tr><td>Дни годы и непонятно что {{ den }}</td></tr>
+    <tr>
+        <td>Дни</br></td>
+        <td>Недель</td>
+        <td>Месяцев</td>
+        <td>Лет</td>
+        <td>Часов</td>
+        <td>Минут</td>
+        <td>Секунд</td>
+    </tr>
+    <tr>
+        <td><b><a href="/raschet/{{ den }}">{{ den }}</a> </b></td>
+        <td><b><a href="/raschet/{{ nedel }}">{{ nedel }}</a> </b></td>
+        <td><b><a href="/raschet/{{ moth }}">{{ moth }}</a></b></td>
+        <td><b><a href="/raschet/{{ let }}">{{ let }}</a></b></td>
+        <td><b><a href="/raschet/{{ hear }}">{{ hear }}</a></b></td>
+        <td><b><a href="/raschet/{{ minuts }}">{{ minuts }}</a></b></td>
+        <td><b><a href="/raschet/{{ seconds }}">{{ seconds }}</a></b></td>
+    </tr>
+    <tr><td><b>------------------</b></td></tr>
+    <tr><td>Что то новое</td></tr>
+        <tr>
+            {% for n in dni1 %}
+            <td><b>{{ n }}</b></td>
+            {% endfor %}
+        </tr>
+        {% for n in dni2 %}
+            <tr>
+                {% for m in n|color_text_a %}
+                    <td><a href="/raschet/{{ m|striptags }}">{{ m|safe }}</a></td>
+                {% endfor %}
+            </tr>
+        {% endfor %}
+    <tr><td><b>----------------</b></td></tr>
+    <tr><td>Гиометрические фигуры</td></tr>
+    <tr>
+        <td>Треугольник</td>
+        <td></td>
+        <td>Куб изв грань</td>
+        <td></td>
+        <td>куб изв.диагон</td>
+    </tr>
+    <tr>
+        <td>Пер.прям.тр-ка</td>
+        <td>со ст 1,1,кор2</td>
+        <td>диагональ</td>
+        <td><b><a href="/raschet/{{ kub }}">{{ kub }}</a></b></td>
+        <td>грань</td>
+        <td><b><a href="/raschet/{{ kubb }}">{{ kubb }}</a></b></td>
+    </tr>
+    <tr>
+        <td>если изв гипот</td>
+        <td><b><a href="/raschet/{{ gipot }}">{{ gipot }}</a></b></td>
+        <td>пол диагонали</td>
+        <td><b><a href="/raschet/{{ kub1 }}">{{ kub1 }}</a></b></td>
+        <td>периметр</td>
+        <td><b><a href="/raschet/{{ kubb1 }}">{{ kubb1 }}</a></b></td>
+    </tr>
+    <tr>
+        <td>если изв строна</td>
+        <td><b><a href="/raschet/{{ gipot1 }}">{{ gipot1 }}</a></b></td>
+        <td>диаг. Грани</td>
+        <td><b><a href="/raschet/{{ kub2 }}">{{ kub2 }}</a></b></td>
+        <td>диагон. Грани</td>
+        <td><b><a href="/raschet/{{ kubb2 }}">{{ kubb2 }}</a></b></td>
+    </tr>
+    <tr>
+        <td>Если известен</td>
+        <td></td>
+        <td>периметр граней</td>
+        <td><b><a href="/raschet/{{ kub3 }}">{{ kub3 }}</a></b></td>
+    </tr>
+    <tr>
+        <td>периметр тр-ка</td>
+        <td></td>
+        <td>куб изв диаг грани</td>
+    </tr>
+
+    <tr>
+        <td>то гипотенуза</td>
+        <td><b><a href="/raschet/{{ gipot2 }}">{{ gipot2 }}</a></b></td>
+        <td>грань</td>
+        <td><b><a href="/raschet/{{ kub4 }}">{{ kub4 }}</a></b></td>
+    </tr>
+    <tr>
+        <td>то сторона</td>
+        <td><b><a href="/raschet/{{ gipot3 }}">{{ gipot3 }}</a></b></td>
+        <td>периметр граней</td>
+        <td><b><a href="/raschet/{{ kub5 }}">{{ kub5 }}</a></b></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td>диагональ</td>
+        <td><b><a href="/raschet/{{ kub6 }}">{{ kub6 }}</a></b></td>
+    </tr>
+    <tr><td>фигуры</td></tr>
+        <tr>
+            <td>
+                {% for n in figura_coment %}
+                    {{ n }}</br>
+                {% endfor %}
+            </td>
+            <td>
+                {% for n in figura_racsceta|color_text_a %}
+                   <a href="/raschet/{{ n|striptags }}">{{ n|safe }}</a></br>
+                {% endfor %}
+            </td>
+            <td>
+                {% for n in figured_rasceta_obr|color_text_a %}
+                   <a href="/raschet/{{ n|striptags }}">{{ n|safe }}</a></br>
+                {% endfor %}
+            </td>
+        </tr>
+    <tr><td>Зависимости прямые</td></tr>
+    <tr>
+        <td>
+            {% for n in mass1 %}
+             {{ n }}</br>
+            {% endfor %}
+        </td>
+        <td>
+            {% for n in mass %}
+            {{ n|safe }}
+            {% endfor %}
+        </td>
+         <td>
+            {% for n in mass2 %}
+             {{ n|safe}}</br>
+            {% endfor %}
+        </td>
+        <td>
+            {% for n in mass3 %}
+            {{ n|safe }}
+            {% endfor %}
+        </td>
+        <td>
+            {% for n in mass4 %}
+             {{ n }}</br>
+            {% endfor %}
+        </td>
+        <td>
+            {% for n in mass5 %}
+            {{ n|safe }}
+            {% endfor %}
+        </td>
+    <td>
+            {% for n in mass6 %}
+             {{ n }}</br>
+            {% endfor %}
+        </td>
+        <td>
+            {% for n in mass7 %}
+            {{ n|safe }}
+            {% endfor %}
+        </td>
+    </tr>
+    <tr><td>Второй блок модуль</td></tr>
+    <tr>
+        <td>
+            {% for n in it_mass12 %}
+             {{ n }}</br>
+            {% endfor %}
+        </td>
+        <td>
+            {% for n in it_mass2 %}
+            {{ n|safe }}
+            {% endfor %}
+        </td>
+         <td>
+            {% for n in it_mass22 %}
+             {{ n|safe}}</br>
+            {% endfor %}
+        </td>
+        <td>
+            {% for n in it_mass32 %}
+            {{ n|safe }}
+            {% endfor %}
+        </td>
+     <td>
+            {% for n in it_mass13 %}
+             {{ n }}</br>
+            {% endfor %}
+        </td>
+        <td>
+            {% for n in it_mass_3 %}
+            {{ n|safe }}
+            {% endfor %}
+        </td>
+         <td>
+            {% for n in it_mass23 %}
+             {{ n|safe}}</br>
+            {% endfor %}
+        </td>
+        <td>
+            {% for n in it_mass33 %}
+            {{ n|safe }}
+            {% endfor %}
+        </td>
+    </tr>
+    <tr><td>Дни</td></tr>
+    <tr>
+        <td>
+            {% for n in it_mass14 %}
+            {{ n|safe }}</br>
+            {% endfor %}
+        </td>
+         <td>
+            {% for n in it_mass24 %}
+             {{ n|safe}}
+            {% endfor %}
+        </td>
+    </tr>
+
+</table>
+    {% endif %}
+</header>
+</body>
+</html>

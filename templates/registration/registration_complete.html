@@ -1,0 +1,25 @@
+{% extends "sites/shablon.html" %}
+{% block body %}
+<h1>Регистрация завершена</h1>
+Спасибо за уделённое время. На ваш e-mail отправлен 
+код подтверждения. Необходимо подтвердить регистрацию, 
+просто кликнув по указанной ссылке.<br><br>
+{% endblock %}
+{% block login %}
+{% if not autuser %}
+<tbody>
+{% if form.errors %}
+    <p class="error">Сожалеем, вы неправильно ввели логин или пароль</p>
+{% endif %}
+<tr>
+<form style="margin: 0;" action='' method='post'> {% csrf_token %}
+<td style="padding-bottom: 5px;">Имя:<br><input type="text" class="textbox" name="username" value="" id="username"></td></tr>
+<tr>
+<td style="padding-bottom: 5px;">Password:<br><input type="password" class="textbox" name="password" value="" id="password"></td></tr>
+<tr>
+<td><input class="submit" value="войти" type="submit">Регистрация
+    <input type="hidden" name="next" value="{{ next|escape }}" />
+</form></td></tr></tbody></table></td></tr>
+</tbody>
+ {% endif %}
+ {% endblock %}

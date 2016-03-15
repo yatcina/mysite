@@ -1,0 +1,25 @@
+{%  extends "sites/shablon.html" %}
+{% block body %}
+<h1>Активация</h1>
+Привет, {{ account }}!<br>
+Ваша учетная запись активирована. <a href="{% url 'auth_login' %}">Заходите</a> на сайт.
+<br><br>
+{% endblock %}
+{% block login %}
+{% if not autuser %}
+<tbody>
+{% if form.errors %}
+    <p class="error">Сожалеем, вы неправильно ввели логин или пароль</p>
+{% endif %}
+<tr>
+<form style="margin: 0;" action='' method='post'> {% csrf_token %}
+<td style="padding-bottom: 5px;">Имя:<br><input type="text" class="textbox" name="username" value="" id="username"></td></tr>
+<tr>
+<td style="padding-bottom: 5px;">Password:<br><input type="password" class="textbox" name="password" value="" id="password"></td></tr>
+<tr>
+<td><input class="submit" value="войти" type="submit">Регистрация
+    <input type="hidden" name="next" value="{{ next|escape }}" />
+</form></td></tr></tbody></table></td></tr>
+</tbody>
+ {% endif %}
+ {% endblock %}

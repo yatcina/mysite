@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block search %}
+{% if errors %}
+        <ul>
+            {% for error in errors %}
+            <li>{{ error }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    <form action="/search/" method="get">
+        <input type="text" name="q">
+        <input type="submit" value="Поиск">
+    </form>
+{% endblock %}
