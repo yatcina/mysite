@@ -990,8 +990,7 @@ def raschet(request):
                 ff = []
                 for n in ser_a:
                     ff.append(n.seria)
-                mas_ch.append(ch)
-                mas_ch += ff
+                mas_ch = ff
             mas_ch_obr = [1/float(x) for x in mas_ch]
             d = float(ch)
             a = func_rasceta(d)
