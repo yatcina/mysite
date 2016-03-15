@@ -78,10 +78,8 @@
       <file leaf-file-name="views.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/rabota/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="992" column="33" selection-start="41538" selection-end="41538" vertical-scroll-proportion="0.80194175" vertical-offset="16451" max-vertical-offset="26656">
-              <folding>
-                <element signature="e#22#85#0" expanded="true" />
-              </folding>
+            <state line="8" column="38" selection-start="494" selection-end="494" vertical-scroll-proportion="-6.370874" vertical-offset="3417" max-vertical-offset="26690">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -119,8 +117,10 @@
       <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rabota/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="62" selection-start="569" selection-end="569" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391">
-              <folding />
+            <state line="17" column="62" selection-start="569" selection-end="569" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="408">
+              <folding>
+                <element signature="e#39#69#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -128,7 +128,7 @@
       <file leaf-file-name="forms.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rabota/forms.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="79" column="46" selection-start="4070" selection-end="4070" vertical-scroll-proportion="0.0" vertical-offset="913" max-vertical-offset="1887">
+            <state line="101" column="0" selection-start="4811" selection-end="4811" vertical-scroll-proportion="0.0" vertical-offset="1270" max-vertical-offset="1887">
               <folding>
                 <element signature="e#22#46#0" expanded="true" />
               </folding>
@@ -155,7 +155,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/templates/registration/activation_email_subject.txt" />
         <option value="$PROJECT_DIR$/customuseradmin/admin.py" />
         <option value="$PROJECT_DIR$/templates/registration/activation_email.txt" />
         <option value="$PROJECT_DIR$/templates/registration/logout.html" />
@@ -202,9 +201,10 @@
         <option value="$PROJECT_DIR$/templates/raschet.html" />
         <option value="$PROJECT_DIR$/statics/vraskrmenu.css" />
         <option value="$PROJECT_DIR$/rabota/models.py" />
-        <option value="$PROJECT_DIR$/rabota/urls.py" />
-        <option value="$PROJECT_DIR$/rabota/forms.py" />
         <option value="$PROJECT_DIR$/templates/serega_add.html" />
+        <option value="$PROJECT_DIR$/templates/Proba.html" />
+        <option value="$PROJECT_DIR$/rabota/forms.py" />
+        <option value="$PROJECT_DIR$/rabota/urls.py" />
         <option value="$PROJECT_DIR$/rabota/views.py" />
       </list>
     </option>
@@ -1070,26 +1070,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rabota/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="62" selection-start="569" selection-end="569" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/rabota/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="45" column="44" selection-start="1978" selection-end="1978" vertical-scroll-proportion="0.0" vertical-offset="383" max-vertical-offset="935">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rabota/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="46" selection-start="4070" selection-end="4070" vertical-scroll-proportion="0.0" vertical-offset="913" max-vertical-offset="1887">
-          <folding>
-            <element signature="e#22#46#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1110,12 +1094,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/rabota/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="101" column="0" selection-start="4811" selection-end="4811" vertical-scroll-proportion="0.0" vertical-offset="1270" max-vertical-offset="1887">
+          <folding>
+            <element signature="e#22#46#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rabota/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="62" selection-start="569" selection-end="569" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="408">
+          <folding>
+            <element signature="e#39#69#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/rabota/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="992" column="33" selection-start="41538" selection-end="41538" vertical-scroll-proportion="0.80194175" vertical-offset="16451" max-vertical-offset="26656">
-          <folding>
-            <element signature="e#22#85#0" expanded="true" />
-          </folding>
+        <state line="8" column="38" selection-start="494" selection-end="494" vertical-scroll-proportion="-6.370874" vertical-offset="3417" max-vertical-offset="26690">
+          <folding />
         </state>
       </provider>
     </entry>

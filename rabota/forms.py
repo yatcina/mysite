@@ -6,6 +6,8 @@ from rabota.models import cam, serega, Seria_name
 from django.contrib.admin.widgets import AdminDateWidget
 from django.utils.html import mark_safe
 from django.utils.translation import ugettext
+from django.forms.models import modelformset_factory,inlineformset_factory
+
 
 class ContactForm(forms.Form):
     vari = ((1,(u"По великому учёному ПИФАГОРУ")), (2,(u"Как обычно бывает от 0 до 36")),(3,(u"Для активации 3 варианта")))
@@ -99,7 +101,5 @@ class Seria(forms.ModelForm):
         model = serega
 
 
-#    class Meta:
-#        model = Seria_name
 
 

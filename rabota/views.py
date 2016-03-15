@@ -1561,3 +1561,4 @@ def uslovie3(vol,vol1,vol2,vol3,vol4): #'''vol = a, vol1 = sd, vol2 = n'''
     else:
         mass,mass1 = 0,0
     return mass1,mass
+
