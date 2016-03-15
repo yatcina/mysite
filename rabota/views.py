@@ -974,6 +974,7 @@ def raschet(request):
             ch1 = cd1['chislo1']
             ch2 = cd1['chislo2']
             ser = cd1['serga_vari']
+            print type(ch)
             if ch == u'0' or ch == u'':
                 ch = 1.0
             elif ch1 == u'0' or ch1 == u'':
