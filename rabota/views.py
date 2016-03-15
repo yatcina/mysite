@@ -974,7 +974,6 @@ def raschet(request):
             ch1 = cd1['chislo1']
             ch2 = cd1['chislo2']
             ser = cd1['serga_vari']
-            print type(ch)
             if ch == u'0' or ch == u'':
                 ch = 1.0
             elif ch1 == u'0' or ch1 == u'':
@@ -991,7 +990,8 @@ def raschet(request):
                 ff = []
                 for n in ser_a:
                     ff.append(n.seria)
-                mas_ch = ff
+                mas_ch.append(ch)
+                mas_ch += ff
             mas_ch_obr = [1/float(x) for x in mas_ch]
             d = float(ch)
             a = func_rasceta(d)
