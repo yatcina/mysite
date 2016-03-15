@@ -965,7 +965,7 @@ def settings_raschet(request,vol):
 
 
 def raschet(request):
-    global mas_ch, mas_ch_obr
+    global mas_ch, mas_ch_obr, ser
     if request.method == 'POST':
         form2 = raschet_form(request.POST)
         if form2.is_valid():
@@ -1410,7 +1410,8 @@ def razbor_masiva(vol):
     return rez
 
 def uslovie(vol,vol1,vol2,vol3,vol4): #'''vol = a, vol1 = sd, vol2 = n'''
-    qz = serega.objects.get(seria = vol4)
+    if ser != u'0':
+        qz = serega.objects.get(seria = vol4)
     if vol1[vol2] == 0:
         indexing = 1
     elif vol1[vol2] == 1:
@@ -1420,56 +1421,86 @@ def uslovie(vol,vol1,vol2,vol3,vol4): #'''vol = a, vol1 = sd, vol2 = n'''
     elif vol1[vol2] == 3:
         indexing = 4
     if vol1[vol2+1] == 0:
-        mass1 = '%s | %s' % (qz.name,vol[indexing+vol3][vol1[vol2-2]])
+        if ser != u'0':
+            mass1 = '%s | %s' % (qz.name,vol[indexing+vol3][vol1[vol2-2]])
+        else:
+            mass1 = vol[indexing+vol3][vol1[vol2-2]]
         mass = '%s * %s = %s</br>' % (vol[0+vol3][vol1[vol2-1]],vol4,vol[indexing+vol3][vol1[vol2-2]])
     elif vol1[vol2+1] == 1:
-        mass1 = '%s | %s' % (qz.name,vol[indexing+vol3][vol1[vol2-2]])
+        if ser != u'0':
+            mass1 = '%s | %s' % (qz.name,vol[indexing+vol3][vol1[vol2-2]])
+        else:
+            mass1 = vol[indexing+vol3][vol1[vol2-2]]
         mass = '%s / %s = %s</br>' % (vol4,vol[0+vol3][vol1[vol2-1]],vol[indexing+vol3][vol1[vol2-2]])
     elif vol1[vol2+1] == 2:
-        mass1 = '%s | %s' % (qz.name,vol[indexing+vol3][vol1[vol2-2]])
+        if ser != u'0':
+            mass1 = '%s | %s' % (qz.name,vol[indexing+vol3][vol1[vol2-2]])
+        else:
+            mass1 = vol[indexing+vol3][vol1[vol2-2]]
         mass = '1/(%s * %s) = %s</br>' % (vol4,vol[0+vol3][vol1[vol2-1]],vol[indexing+vol3][vol1[vol2-2]])
     elif vol1[vol2+1] == 3:
-        mass1 = '%s | %s' % (qz.name,vol[indexing+vol3][vol1[vol2-2]])
+        if ser != u'0':
+            mass1 = '%s | %s' % (qz.name,vol[indexing+vol3][vol1[vol2-2]])
+        else:
+            mass1 = vol[indexing+vol3][vol1[vol2-2]]
         mass = '1/(%s / %s) = %s</br>' % (vol4,vol[0+vol3][vol1[vol2-1]],vol[indexing+vol3][vol1[vol2-2]])
     else:
         mass,mass1 = 0,0
     return mass1,mass
 
 def uslovie1(vol,vol1,vol2,vol3,vol4): #'''vol = a, vol1 = sd, vol2 = n'''
-    qz = serega.objects.get(seria = vol4)
+    if ser != u'0':
+        qz = serega.objects.get(seria = vol4)
     if vol1[vol2] == 0:
         indexing = 0
     elif vol1[vol2] == 1:
         indexing  = 1
     if vol1[vol2+1] == 0:
-        mass1 = '%s | %s' % (qz.name,vol[indexing+vol3][vol1[vol2-2]])
+        if ser != u'0':
+            mass1 = '%s | %s' % (qz.name,vol[indexing+vol3][vol1[vol2-2]])
+        else:
+            mass1 = vol[indexing+vol3][vol1[vol2-2]]
         mass = '%s^%s = %s</br>' % (vol4,vol[-1+vol3][vol1[vol2-1]],vol[indexing+vol3][vol1[vol2-2]])
     elif vol1[vol2+1] == 1:
-        mass1 = '%s | %s' % (qz.name,vol[indexing+vol3][vol1[vol2-2]])
+        if ser != u'0':
+            mass1 = '%s | %s' % (qz.name,vol[indexing+vol3][vol1[vol2-2]])
+        else:
+            mass1 = vol[indexing+vol3][vol1[vol2-2]]
         mass = '1/(%s^%s) = %s</br>' % (vol4,vol[-1+vol3][vol1[vol2-1]],vol[indexing+vol3][vol1[vol2-2]])
     else:
         mass,mass1 = 0,0
     return mass1,mass
 
 def uslovie2(vol,vol1,vol2,vol3,vol4): #'''vol = a, vol1 = sd, vol2 = n'''
-    qz = serega.objects.get(seria = vol4)
+    if ser != u'0':
+        qz = serega.objects.get(seria = vol4)
     if vol1[vol2] == 0:
         indexing = 0
     elif vol1[vol2] == 1:
         indexing  = 1
     if vol1[vol2+1] == 0:
-        mass1 = '%s | %s' % (qz.name,vol[indexing+vol3][vol1[vol2-2]])
+        if ser != u'0':
+            mass1 = '%s | %s' % (qz.name,vol[indexing+vol3][vol1[vol2-2]])
+        else:
+            mass1 = vol[indexing+vol3][vol1[vol2-2]]
         mass = '(%s/%s)*360 = %s</br>' % (vol4,vol[0][-12+vol1[vol2-1]:-12+vol1[vol2-1]+1],vol[indexing+vol3][vol1[vol2-2]])
     elif vol1[vol2+1] == 1:
-        mass1 = '%s | %s' % (qz.name,vol[indexing+vol3][vol1[vol2-2]])
+        if ser != u'0':
+            mass1 = '%s | %s' % (qz.name,vol[indexing+vol3][vol1[vol2-2]])
+        else:
+            mass1 = vol[indexing+vol3][vol1[vol2-2]]
         mass = '1/(%s/%s)*360 = %s</br>' % (vol4,vol[0][-12+vol1[vol2-1]:-12+vol1[vol2-1]+1],vol[indexing+vol3][vol1[vol2-2]])
     else:
         mass,mass1 = 0,0
     return mass1,mass
 
 def uslovie3(vol,vol1,vol2,vol3,vol4): #'''vol = a, vol1 = sd, vol2 = n'''
-    qz = serega.objects.get(seria = vol4)
-    mass1 = '%s | %s' % (qz.name,vol[vol3][vol1[vol2]][vol1[vol2-2]])
+    if ser != u'0':
+        qz = serega.objects.get(seria = vol4)
+    if ser != u'0':
+        mass1 = '%s | %s' % (qz.name,vol[vol3][vol1[vol2]][vol1[vol2-2]])
+    else:
+        mass1 = vol[vol3][vol1[vol2]][vol1[vol2-2]]
     if vol1[vol2+1]==0 and vol1[vol2-1]==0:
         mass = '%s=%s</br>' % (vol4,vol[vol3][vol1[vol2]][vol1[vol2-2]])
     elif vol1[vol2+1]==1 and vol1[vol2-1]==0:
