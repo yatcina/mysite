@@ -1,7 +1,7 @@
 #-*- coding:utf-8 -*-
 from django.shortcuts import render_to_response, RequestContext
 from django.http import HttpResponseRedirect, HttpResponse, Http404
-from rabota.forms import ContactForm, settings_cam, view_cam, raschet_form,Name_seria,Seria
+from rabota.forms import ContactForm, settings_cam, view_cam, raschet_form,Name_seria,Seria,calculator
 from django.contrib.auth.decorators import login_required
 from sites.models import navimenu
 from rabota.models import cam,event,otchet_po_day,otchet_po_hears,serega,Seria_name
@@ -1592,4 +1592,57 @@ def uslovie3(vol,vol1,vol2,vol3,vol4): #'''vol = a, vol1 = sd, vol2 = n'''
     else:
         mass,mass1 = 0,0
     return mass1,mass
+
+def calculators(request):
+    def ras(vol,vol1):
+        day = vol1-vol
+        days_tochno = float(day.seconds)/(24*3600)+float(day.days)
+        return days_tochno
+    a,days_tochno,days_tochno1,days_tochno2,days_tochno3,days_tochno4 = None, None, None, None, None, None
+    result = []
+    if request.method == 'POST':
+        form = calculator(request.POST)
+        if form.is_valid():
+            cd = form.cleaned_data
+            data_start = cd['data_start']
+            data_end = cd['data_end']
+            data_end1 = cd['data_end1']
+            data_end2 = cd['data_end2']
+            data_end3 = cd['data_end3']
+            data_end4 = cd['data_end4']
+            if data_end == None:
+                a = u'Ну ты бля дал, и как ты думаешь чего я тебе должен подсчитать, данных то нет, ну ты ваше...'
+            elif data_start == None:
+                a = u'Тебе откуда начать считать от рождества христова или с рождения планеты ЗЕМЛЯ, а? Исправляй давай а не тупи....'
+            else:
+                days_tochno = ras(data_start,data_end)
+                result.append(days_tochno)
+                if data_end1 != None:
+                    days_tochno1 = ras(data_start,data_end1)
+                    result.append(days_tochno1)
+                if data_end2 != None:
+                    days_tochno2 = ras(data_start,data_end2)
+                    result.append(days_tochno2)
+                if data_end3 != None:
+                    days_tochno3 = ras(data_start,data_end3)
+                    result.append(days_tochno3)
+                if data_end4 != None:
+                    days_tochno4 = ras(data_start,data_end4)
+                    result.append(days_tochno4)
+            vrem = []
+            obshi = [[u'дни',u'месяца',u'годы',u'недели',u'часы',u'минуты',u'секунды']]
+            for n in result:
+                vrem =[]
+                vrem.append(n)
+                vrem.append(n/30.4375)
+                vrem.append(n/365.25)
+                vrem.append(n/7)
+                vrem.append(n*24)
+                vrem.append(n*1440)
+                vrem.append(n*86400)
+                obshi.append(vrem)
+            return render_to_response('calculator.html',{'form':form,'a':a,'result':obshi},RequestContext(request))
+    else:
+        form = calculator()
+    return render_to_response('calculator.html',{'form':form},RequestContext(request))
 

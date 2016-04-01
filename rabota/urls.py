@@ -16,4 +16,5 @@ urlpatterns = patterns('',
    url(r'^raschet/$',views.raschet),
    url(r'^raschet/([^/]+)/$',views.raschet1),
    url(r'^settings_raschet/([^/]+)/$',views.settings_raschet),
+   url(r'^calculator/$',views.calculators),
     )

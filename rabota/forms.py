@@ -64,6 +64,13 @@ class view_cam(forms.Form):
     vari_otchet = forms.ChoiceField(choices=choice, label=u'Вариант отчёта')
     data_time_interval = forms.TimeField(label=ugettext(u'Интервал'))
 
+class calculator(forms.Form):
+    data_start = forms.DateTimeField(label=ugettext(u'Начало'), widget=EventSplitDateTime(),required=False)
+    data_end = forms.DateTimeField(label=ugettext(u'Конец'), widget=EventSplitDateTime(),required=False)
+    data_end1 = forms.DateTimeField(label=ugettext(u'Конец1'), widget=EventSplitDateTime(),required=False)
+    data_end2 = forms.DateTimeField(label=ugettext(u'Конец2'), widget=EventSplitDateTime(),required=False)
+    data_end3 = forms.DateTimeField(label=ugettext(u'Конец3'), widget=EventSplitDateTime(),required=False)
+    data_end4 = forms.DateTimeField(label=ugettext(u'Конец4'), widget=EventSplitDateTime(),required=False)
 def serg_name():
     return tuple([(0,'-----')] + [(x.id, x.name) for x in Seria_name.objects.all()])
 class raschet_form(forms.Form):
