@@ -1597,7 +1597,7 @@ def calculators(request):
     def ras(vol,vol1):
         day = vol1-vol
         days_tochno = float(day.seconds)/(24*3600)+float(day.days)
-        math.fabs(days_tochno)
+        days_tochno = math.fabs(days_tochno)
         return days_tochno
     a,days_tochno,days_tochno1,days_tochno2,days_tochno3,days_tochno4 = None, None, None, None, None, None
     result = []
