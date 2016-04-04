@@ -75,13 +75,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="views.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/rabota/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1586" column="44" selection-start="69160" selection-end="69160" vertical-scroll-proportion="0.0" vertical-offset="26787" max-vertical-offset="28118">
+            <state line="1594" column="0" selection-start="69501" selection-end="69501" vertical-scroll-proportion="0.207767" vertical-offset="26991" max-vertical-offset="28135">
               <folding>
                 <element signature="e#22#85#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mysite/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="92" column="9" selection-start="2527" selection-end="2527" vertical-scroll-proportion="0.0" vertical-offset="1342" max-vertical-offset="2380">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -109,7 +118,7 @@
       <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rabota/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="5" selection-start="619" selection-end="619" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
+            <state line="6" column="26" selection-start="123" selection-end="123" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
               <folding>
                 <element signature="e#39#69#0" expanded="true" />
               </folding>
@@ -117,29 +126,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/mysite/settings.py">
+      <file leaf-file-name="admin.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rabota/admin.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="26" selection-start="782" selection-end="804" vertical-scroll-proportion="-2.3806818" vertical-offset="1699" max-vertical-offset="2380">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="forms.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rabota/forms.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="72" column="59" selection-start="3930" selection-end="3930" vertical-scroll-proportion="0.0" vertical-offset="894" max-vertical-offset="1887">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rabota/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="44" selection-start="1978" selection-end="1978" vertical-scroll-proportion="0.0" vertical-offset="383" max-vertical-offset="935">
-              <folding />
+            <state line="1" column="0" selection-start="17" selection-end="38" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
+              <folding>
+                <marker date="1458043117838" expanded="true" signature="39:99" placeholder="import ..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -199,11 +192,11 @@
         <option value="$PROJECT_DIR$/rabota/models.py" />
         <option value="$PROJECT_DIR$/templates/serega_add.html" />
         <option value="$PROJECT_DIR$/templates/Proba.html" />
-        <option value="$PROJECT_DIR$/rabota/admin.py" />
         <option value="$PROJECT_DIR$/rabota/urls.py" />
         <option value="$PROJECT_DIR$/templates/raschet.html" />
         <option value="$PROJECT_DIR$/rabota/forms.py" />
         <option value="$PROJECT_DIR$/templates/calculator.html" />
+        <option value="$PROJECT_DIR$/rabota/admin.py" />
         <option value="$PROJECT_DIR$/rabota/views.py" />
       </list>
     </option>
@@ -305,7 +298,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="sites" />
+              <option name="myItemId" value="rabota" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -320,6 +313,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="rabota" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templatetags" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -747,7 +744,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -811,6 +808,13 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/rabota/forms.py</url>
+          <line>1</line>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+      </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
@@ -819,38 +823,13 @@
           <properties exception="BaseException" />
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="36" />
+      <option name="time" value="37" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://C:/Python27/Lib/site-packages/django/contrib/admin/templates/registration/password_change_form.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="37" selection-end="59" vertical-scroll-proportion="0.0425" vertical-offset="0" max-vertical-offset="1037" />
-      </provider>
-    </entry>
-    <entry file="file://C:/Python27/Lib/site-packages/django/contrib/admin/templates/admin/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1445" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/books/poll_extras.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/schetchik.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="119" column="41" selection-start="4685" selection-end="4685" vertical-scroll-proportion="1.6843318" vertical-offset="1258" max-vertical-offset="2414" />
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.PyCharm30/system/python_stubs/-762174762/cv2/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="3032" column="14" selection-start="97508" selection-end="97508" vertical-scroll-proportion="0.35472974" vertical-offset="51093" max-vertical-offset="52207" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="18" selection-start="599" selection-end="599" vertical-scroll-proportion="0.5635359" vertical-offset="0" max-vertical-offset="629" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/books/admin.py">
@@ -913,11 +892,6 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.33015266" vertical-offset="173" max-vertical-offset="697" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sites/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="629" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/books/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="528" />
@@ -968,11 +942,6 @@
         <state line="19" column="1" selection-start="343" selection-end="343" vertical-scroll-proportion="0.61174244" vertical-offset="0" max-vertical-offset="528" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rabota/templatetags/poll_extras.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="81" selection-start="629" selection-end="629" vertical-scroll-proportion="0.6761364" vertical-offset="0" max-vertical-offset="731" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/raschet1.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="322" column="7" selection-start="9404" selection-end="9404" vertical-scroll-proportion="0.93227094" vertical-offset="5006" max-vertical-offset="5576" />
@@ -1010,15 +979,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rabota/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="27" selection-start="283" selection-end="283" vertical-scroll-proportion="0.28977272" vertical-offset="0" max-vertical-offset="528">
-          <folding>
-            <element signature="e#39#71#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/serega_add.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="43" selection-start="185" selection-end="185" vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="1360">
@@ -1040,20 +1000,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rabota/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="44" selection-start="1978" selection-end="1978" vertical-scroll-proportion="0.0" vertical-offset="383" max-vertical-offset="935">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rabota/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="59" selection-start="3930" selection-end="3930" vertical-scroll-proportion="0.0" vertical-offset="894" max-vertical-offset="1887">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/calculator.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="57" column="8" selection-start="2478" selection-end="2478" vertical-scroll-proportion="-31.73077" vertical-offset="144" max-vertical-offset="1105">
@@ -1070,29 +1016,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="680">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rabota/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1586" column="44" selection-start="69160" selection-end="69160" vertical-scroll-proportion="0.0" vertical-offset="26787" max-vertical-offset="28118">
-          <folding>
-            <element signature="e#22#85#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="38" selection-start="992" selection-end="992" vertical-scroll-proportion="0.3631068" vertical-offset="0" max-vertical-offset="515">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/polls/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="19" selection-start="359" selection-end="359" vertical-scroll-proportion="0.3219697" vertical-offset="0" max-vertical-offset="528">
@@ -1100,9 +1023,111 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/mysite/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="51" selection-start="103" selection-end="222" vertical-scroll-proportion="0.18939394" vertical-offset="2" max-vertical-offset="748">
+          <folding>
+            <element signature="e#39#69#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rabota/tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="528">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="32" selection-start="72" selection-end="226" vertical-scroll-proportion="0.22537878" vertical-offset="0" max-vertical-offset="528">
+          <folding>
+            <element signature="e#39#71#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="49" selection-start="39" selection-end="965" vertical-scroll-proportion="0.8390151" vertical-offset="67" max-vertical-offset="663">
+          <folding>
+            <element signature="e#39#67#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="40" selection-start="22" selection-end="697" vertical-scroll-proportion="0.6761364" vertical-offset="0" max-vertical-offset="629">
+          <folding>
+            <element signature="e#22#89#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="5" selection-start="39" selection-end="1017" vertical-scroll-proportion="0.49514562" vertical-offset="0" max-vertical-offset="515">
+          <folding>
+            <element signature="e#39#69#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/form.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="0" selection-start="39" selection-end="349" vertical-scroll-proportion="0.28977272" vertical-offset="0" max-vertical-offset="528">
+          <folding>
+            <element signature="e#39#63#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rabota/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="0" selection-start="2055" selection-end="2055" vertical-scroll-proportion="1.0625" vertical-offset="255" max-vertical-offset="935">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rabota/templatetags/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="0" selection-start="23" selection-end="23" vertical-scroll-proportion="0.03219697" vertical-offset="0" max-vertical-offset="528">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rabota/templatetags/poll_extras.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="17" selection-start="1031" selection-end="1031" vertical-scroll-proportion="0.93560606" vertical-offset="169" max-vertical-offset="765">
+          <folding>
+            <element signature="e#39#66#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rabota/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="0" selection-start="17" selection-end="38" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
+          <folding>
+            <marker date="1458043117838" expanded="true" signature="39:99" placeholder="import ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rabota/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="105" selection-start="2043" selection-end="2642" vertical-scroll-proportion="0.69320387" vertical-offset="510" max-vertical-offset="2006">
+          <folding>
+            <element signature="e#22#46#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/rabota/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="5" selection-start="619" selection-end="619" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
+        <state line="6" column="26" selection-start="123" selection-end="123" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
           <folding>
             <element signature="e#39#69#0" expanded="true" />
           </folding>
@@ -1111,8 +1136,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mysite/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="26" selection-start="782" selection-end="804" vertical-scroll-proportion="-2.3806818" vertical-offset="1699" max-vertical-offset="2380">
+        <state line="92" column="9" selection-start="2527" selection-end="2527" vertical-scroll-proportion="0.0" vertical-offset="1342" max-vertical-offset="2380">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rabota/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1594" column="0" selection-start="69501" selection-end="69501" vertical-scroll-proportion="0.207767" vertical-offset="26991" max-vertical-offset="28135">
+          <folding>
+            <element signature="e#22#85#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
