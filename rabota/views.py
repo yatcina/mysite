@@ -4,7 +4,7 @@ from django.http import HttpResponseRedirect, HttpResponse, Http404
 from rabota.forms import ContactForm, settings_cam, view_cam, raschet_form,Name_seria,Seria,calculator
 from django.contrib.auth.decorators import login_required
 from sites.models import navimenu
-from rabota.models import cam,event,otchet_po_day,otchet_po_hears,serega,Seria_name
+from rabota.models import cam,event,otchet_po_day,otchet_po_hears,serega,Seria_name,video
 from qsstats import QuerySetStats
 from django.core.mail import send_mail
 from django.forms.models import inlineformset_factory
@@ -462,6 +462,24 @@ def podschet(vol):
 
 def zapis(request):
     return render_to_response('zapis.html',{'request':request},RequestContext(request))
+
+def video_cam(request):
+    video_zap = video.objects.all()
+    mas = []
+    for z in video_zap:
+        mas.append(dict([(z.name_cam,z.ip_cam)]))
+    mm=0
+    n=1
+    while mm < len(mas):
+        print n
+        if mm == n*10:
+            n+=1
+        mm +=1
+    mass = []
+    for z in range(0,n):
+        mass.append(mas[z*10:(z*10)+10])
+    print mass
+    return render_to_response('video_nab.html',{'video_cam':mass,'request':request},RequestContext(request))
 
 def process_zapisi(request):
     basedir = "e:\\ftp\detektor\kassa"

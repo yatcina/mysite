@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<table>
+    {% for n in video_cam %}
+        <tr>
+            {% for mm in n %}
+                {% for m, b in mm.items %}
+                    <td>
+                        <div class="content"><p>
+                            <div>{{ m }}</div>
+                        <embed style="width: 160px; height: 145px;" type="application/x-mplayer2" width="160" height="120" src="{{ b }}"
+                        hspace="0" name="MediaPlayer" showtracker="0" showstatusbar="1" showdisplay="0" showcontrols="1" autosize="0">
+                        </embed></p></div>
+                    </td>
+                {% endfor %}
+            {% endfor %}
+        </tr>
+    {% endfor %}
+</table>
+</body>
+</html>

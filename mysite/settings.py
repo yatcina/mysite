@@ -27,7 +27,6 @@ TEMPLATE_DIRS = (
     '../mysite/templates',
     '../mysite/templates/sites', # Change this to your own directory.
 )
-
 ALLOWED_HOSTS = []
 #E-mail
 EMAIL_HOST = '10.0.0.9'
@@ -103,16 +102,14 @@ USE_L10N = True
 
 #USE_TZ = True
 
-
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/1.6/howto/static-files/
 def lef(*x):
     return os.path.normpath(os.path.join(os.path.dirname(__file__), *x).replace('\\','/'))
 
-STATICFILES_DIRS = (
+#STATICFILES_DIRS = (
 
-    '../mysite/statics/',
-)
+#    '../mysite/statics/',
+#)
+
 MEDIA_ROOT = lef('../tmp/')
 MEDIA_URL = 'http://10.0.254.56:8000/'
 STATIC_ROOT = lef('../statics/')
@@ -128,7 +125,3 @@ LOGIN_REDIRECT_URL = '/rabota/'
 
 ACCOUNT_ACTIVATION_DAYS = 2
 PASSWORD_RESET_TIMEOUT_DAYS = 2
-
-
-
-

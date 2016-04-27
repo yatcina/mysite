@@ -25,6 +25,8 @@ urlpatterns += patterns('',
   url(r'',include('sites.urls')),
   )
 
+
+
 if settings.DEBUG:
     urlpatterns += patterns('',
     (r'^tmp/(?P<path>.*)$', 'django.views.static.serve',

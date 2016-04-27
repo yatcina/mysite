@@ -47,3 +47,8 @@ class serega(models.Model):
     def __unicode__(self):
         return '%s %s' % (self.name, self.seria)
 
+class video(models.Model):
+    name_cam = models.CharField(max_length = 100)
+    ip_cam = models.CharField(max_length= 400)
+    def __unicode__(self):
+        return '%s' % (self.name_cam)
